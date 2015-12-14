@@ -1,0 +1,18 @@
+<div ng-controller="DetailsCtrl">
+	<h1 ng-bind="product.name"></h1>{{product.name}}
+	<p ng-bind="product.description"></p>
+	<p class="control-label">$ {{product.price}}</p>
+	<div class="container row">
+		<div ng-repeat="comment in product.comments">
+			<h4>{{comment.name}}</h4>
+			<p>{{comment.text}}</p>
+		</div>
+		<div class="row">
+			<form name="createCommentForm" ng-submit="CreateComment()">
+                <auto:fields fields="schema" data="comment"></auto:fields>
+                <button type="submit" class="btn btn-default btn-lg btn-block" ng-class="{'btn-primary':createCommentForm.$valid}" tabindex="100">Save</button>
+			</form>
+		</div>
+	</div>
+	<a ng-href="/">Go Back</a>
+</div>

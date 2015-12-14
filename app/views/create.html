@@ -1,0 +1,10 @@
+<div class="container" ng-controller="CreateCtrl">
+	<div class="row">
+		<h1>Create</h1>
+		<form name="createForm" ng-submit="create()">
+                <auto:fields fields="schema" data="product"></auto:fields>
+                <button type="submit" class="btn btn-default btn-lg btn-block" ng-class="{'btn-primary':createForm.$valid}" tabindex="100">create</button>
+        </form>
+	</div>
+</div>
+	

@@ -1,0 +1,18 @@
+<div class="container-fluid" ng-controller="MainCtrl">
+  <h1>List of Products</h1>
+  <a ng-href="/#/ProductCreate">Create</a>
+    <table class="table table-striped">
+      <thead>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Details</td>
+      </thead>
+      <tr ng-repeat="product in products">
+        <td ng-bind="product.name"></td>
+        <td ng-bind="product.description"></td>
+        <td ng-bind="product.price"></td>
+        <td><a ng-href="/#/ProductDetails/{{product.id}}">Click for Details</a></td>
+      </tr>
+    </table>
+</div>
