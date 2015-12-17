@@ -11,7 +11,7 @@ angular.module('angularJsApp')
   .controller('DetailsCtrl',['$scope', '$routeParams', 'datacontext', '$location', function ($scope, $routeParams, datacontext, $location) {
       
       var id = $routeParams.id;
-        $scope.product = datacontext.product(id).then(function (data) {
+        datacontext.product(id).then(function (data) {
             $scope.product = data;
         }, function (status) {  });
         
